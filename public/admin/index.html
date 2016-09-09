@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/admimistrator">administrator</a></li>
+                            <li><a href="#/home">home</a></li>
+                            <li><a href="#/contact-Us">contact-Us</a></li>
+                            <li><a href="#/supporter">supporter</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div ng-view></div>
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="components/contact-us/contactUs.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/supporter/supporter.js"></script>
+    <script src="components/administrator/administrator.js"></script>
+    <script src="sevices.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<form class="adminForm">
+    <div class="form-group homeForm">
+        <div class="row">
+            <!--
+            <div class="col-md-6">
+                <h3> Store Type:</h3>
+                <select class="form-control">
+                    <option ng-model="rest">restaurant</option>
+                </select>
+            </div>
+-->
+            <br>
+            <br>
+            <br>
+
+            <div class="col-md-6">
+                <h3 class="formFont">restaurant:</h3>
+                <input class="form-control" type="text" placeholder="restaurant Name" ng-model="rest.storeName">
+            </div>
+            <div class="col-md-6">
+                <h3  class="formFont">store Type:</h3>
+                 <select class="form-control">
+                    <option ng-model="rest.storeType">restaurant</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="formFont">item:</h3>
+                <input class="form-control" type="text" placeholder="Enter your items" ng-model="res.items.name">
+            </div>
+            <div class="col-md-6">
+                <h3 class="formFont">Price:</h3>
+                <input class="form-control" type="text" placeholder="Enter the Price of an item" ng-model="res.price.name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="formFont">Imeges of the item:</h3>
+                <input class="form-control" type="text" placeholder="Enter your link to the img" ng-model="res.name">
+            </div>
+            <div class="col-md-6">
+                <h3 class="formFont">Image:</h3>
+                <input class="form-control" type="text" placeholder="Img link" ng-model="res.img.name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="formFont">Description</h3>
+                <textarea cols="160" placeholder="Description for the item" ng-model="res.Description.name"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <button ng-click="">Add An item</button>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="formFont">help Center Name:</h3>
+                <input class="form-control" type="text" placeholder="Help center" ng-model="res.helpCenter.name">
+            </div>
+            <div class="col-md-6">
+                <h3 class="formFont">help Center Number:</h3>
+                <input class="form-control" type="text" placeholder="Help center Number" ng-model="res.helpCenter.telephoneNumber">
+            </div>
+        </div>
+        <div class="row">
+            <center><button ng-click="">Add</button></center>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+<!--{{test}}-->

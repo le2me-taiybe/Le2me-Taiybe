@@ -1,0 +1,10 @@
+.adminForm {
+    background-color: darkred;
+    border: black 3px double;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formFont {
+    color: coral;
+}

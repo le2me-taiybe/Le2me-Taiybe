@@ -1,0 +1,79 @@
+.bg-img {}
+
+.searchDiv {
+    height: 250px;
+    background-image: url("../imgs/kabani.png");
+    background-size: cover;
+    float: left;
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    top: 0px;
+}
+
+.searchBar {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 305px;
+    margin-top: 0px;
+}
+
+.widget-clock.white .digital {
+    text-align: center;
+}
+
+.widget-clock.white .time {
+    font-family: 'Rationale', sans-serif;
+    font-size: 8.0em;
+    color: white;
+}
+
+.widget-clock {
+    margin-top: 8%;
+    margin-right: 4%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fb-profile img.fb-image-lg {
+    z-index: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.fb-image-profile {
+    margin: -90px 10px 0px 50px;
+    z-index: 9;
+    width: 20%;
+}
+
+@media (max-width:768px) {
+    .fb-profile-text>h1 {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .fb-image-profile {
+        margin: -45px 10px 0px 25px;
+        z-index: 9;
+        width: 20%;
+    }
+}
+
+.logo {
+    height: 340%;
+}
+
+/*
+#changeImgStyle { position: relative; height: 100px; width: 200px; }
+#changeImgStyle img { position: absolute; right: 0; bottom: 0; }
+*/
+.homelogo {
+    height: 223px;
+    float: right;
+    margin-top: -18%;
+    margin-left: 149px;
+    position: absolute;
+}

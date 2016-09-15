@@ -1,22 +1,23 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var port = process.env.PORT  || 8000;
+var port = process.env.PORT || 8000;
 var propertyRouter = require('./routers/routers');
-var expressJwt = require('express-jwt');
-var config = require('./config');
+//var expressJwt = require('express-jwt');
+//var config = require('./config');
 
 
 
 var app = express();
 app.use(bodyParser.json());
-//app.use(express.static("../Front-end"));
-app.use("/api",expressJwt({secret:config.secret}));
-app.use('/api',require("./routers/routers"));
-app.use("/auth",require("./routers/auth"));
+app.use(express.static("../public"));
+//app.use("/api",expressJwt({secret:config.secret}));
+app.use('/api', require("./routers/routers"));
+//app.use("/auth",require("./routers/auth"));
+//app.use("/api", expressJwt({secret: config.secret}).unless({path: ["/api/stores"]}));
 
 
-mongoose.connect(config.database, function(){
+mongoose.connect("mongodb://localhost/Final-app", function () {
     console.log("Server is successfuly connected to the DataBase");
 });
 
@@ -24,6 +25,8 @@ mongoose.connect(config.database, function(){
 
 
 
-app.listen(port , function(){
+
+
+app.listen(port, function () {
     console.log("My server is running")
 });

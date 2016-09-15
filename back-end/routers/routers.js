@@ -3,7 +3,7 @@ var storeRouter = express.Router();
 var Store = require('../models/stores');
 var comments = require('../models/comments');
 
-storeRouter.route("/")
+storeRouter.route("/stores")
     .get(function (req, res) {
 
         Store.find(function (err, allStories) {
@@ -16,7 +16,7 @@ storeRouter.route("/")
         })
     })
     .post(function (req, res) {
-//        console.log(req.body);
+        //        console.log(req.body);
         var newStore = new Store(req.body);
         newStore.save(function (err, newOneStore) {
             if (err) {
@@ -28,7 +28,7 @@ storeRouter.route("/")
 
     })
 
-storeRouter.route("/:id")
+storeRouter.route("/stores/:id")
     .get(function (req, res) {
         Store.findById(req.params.id, function (err, getOneStore) {
             if (err) {
@@ -40,6 +40,7 @@ storeRouter.route("/:id")
     })
 
 .delete(function (req, res) {
+    console.log("hello eric best teacher :)");
     var storeId = req.params.id;
     Store.findOneAndRemove({
         _id: storeId
@@ -58,12 +59,12 @@ storeRouter.route("/:id")
     Store.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     }, function (err, updatedStore) {
-         console.log(updatedStore);
+        console.log(updatedStore);
         if (err) {
             res.status(500).send(err);
         } else {
             res.send(updatedStore);
-//            console.log(updatedStore);
+            //            console.log(updatedStore);
         }
     });
 

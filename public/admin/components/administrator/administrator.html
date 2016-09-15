@@ -1,94 +1,117 @@
-<form class="adminForm">
-    <div class="form-group homeForm">
-        <div class="row">
-            <!--
-            <div class="col-md-6">
-                <h3> Store Type:</h3>
-                <select class="form-control">
-                    <option ng-model="rest">restaurant</option>
-                </select>
-            </div>
--->
-            <br>
-            <br>
-            <br>
-
-            <div class="col-md-6">
-                <h3 class="formFont">restaurant:</h3>
-                <input class="form-control" type="text" placeholder="restaurant Name" ng-model="rest.storeName">
-            </div>
-            <div class="col-md-6">
-                <h3  class="formFont">store Type:</h3>
-                 <select class="form-control">
-                    <option ng-model="rest.storeType">restaurant</option>
-                </select>
-            </div>
-
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group row">
+            <form name="validateForm" novalidate class="formMargin">
+                <label for="example-text-input" class="col-md-5 col-form-label">Restaurant Name:</label>
+                <div class="col-md-7">
+                    <input class="form-control" ng-model="admin.restoName" type="text" placeholder="Restaurant Name" id="example-text-input"> </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="formFont">item:</h3>
-                <input class="form-control" type="text" placeholder="Enter your items" ng-model="res.items.name">
-            </div>
-            <div class="col-md-6">
-                <h3 class="formFont">Price:</h3>
-                <input class="form-control" type="text" placeholder="Enter the Price of an item" ng-model="res.price.name">
-            </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-md-5 col-form-label">Add Images:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.storeImg" type="search" placeholder="Resto pics" id="example-search-input"> </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="formFont">Imeges of the item:</h3>
-                <input class="form-control" type="text" placeholder="Enter your link to the img" ng-model="res.name">
-            </div>
-            <div class="col-md-6">
-                <h3 class="formFont">Image:</h3>
-                <input class="form-control" type="text" placeholder="Img link" ng-model="res.img.name">
-            </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-md-5 col-form-label">Cuisines:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.cuisines" type="search" placeholder="Type of foods you serve" id="example-search-input"> </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="formFont">Description</h3>
-                <textarea cols="160" placeholder="Description for the item" ng-model="res.Description.name"></textarea>
-            </div>
+        <div class="form-group row">
+            <label for="example-email-input" class="col-md-5 col-form-label">Email:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.email" placeholder="Resto@example.com" id="example-email-input"> </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <center>
-                    <button ng-click="">Add An item</button>
-                </center>
-            </div>
+        <div class="form-group row">
+            <label for="example-url-input" class="col-md-5 col-form-label">URL:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.URL" placeholder="www.Restosite.com" id="example-url-input"> </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="formFont">help Center Name:</h3>
-                <input class="form-control" type="text" placeholder="Help center" ng-model="res.helpCenter.name">
-            </div>
-            <div class="col-md-6">
-                <h3 class="formFont">help Center Number:</h3>
-                <input class="form-control" type="text" placeholder="Help center Number" ng-model="res.helpCenter.telephoneNumber">
-            </div>
+        <div class="form-group row">
+            <label for="example-tel-input" class="col-md-5 col-form-label">Telephone:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.tele" type="tel" placeholder="01 or 03" id="example-tel-input"> </div>
         </div>
-        <div class="row">
-            <center><button ng-click="">Add</button></center>
+        <div class="form-group row">
+            <label for="example-time-input" class="col-md-5 col-form-label">Clossing hours:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.closeHr" type="time" placeholder="13:45:00" id="example-time-input"> </div>
         </div>
-
-
-
-
-
-
-
-
     </div>
-</form>
+    <div class="col-md-6">
+        <div class="form-group row">
+            <label for="example-password-input" class="col-md-5 col-form-label">Cost for two people:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.cost" type="Number" placeholder="Price" id="example-password-input"> </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-number-input" class="col-md-5 col-form-label">Address:</label>
+            <div class="col-md-3">
+                <input class="form-control" ng-model="admin.latAdd" type="Number" placeholder="Latitude"> </div>
+            <div class="col-md-3">
+                <input class="form-control" ng-model="admin.lonAdd" type="Number" placeholder="longtitude"> </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-md-5 col-form-label">Menu Img:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.menuImg" type="String" placeholder="Menu pic" id="example-datetime-local-input"> </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-time-input" class="col-md-5 col-form-label">Cover Photo :</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.coverImg" id="example-time-input"> </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-time-input" class="col-md-5 col-form-label">Thumber Photo :</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.thumbImg" id="example-time-input" placeholder="Rest lOGO"> </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-date-input" class="col-md-5 col-form-label">Since :</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.since" type="date" placeholder="First opend in" id="example-date-input"> </div>
+        </div>
+        <!--
+        <div class="form-group row">
+            <label for="example-month-input" class="col-md-5 col-form-label">Month</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="" type="month" placeholder="2011-08" id="example-month-input"> </div>
+        </div>
+-->
+        <!--
+        <div class="form-group row">
+            <label for="example-week-input" class="col-md-5 col-form-label">Week</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="" type="week" placeholder="2011-W33" id="example-week-input"> </div>
+        </div>
+-->
+        <div class="form-group row">
+            <label for="example-time-input" class="col-md-5 col-form-label">Opening hours:</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.openHr" type="time" placeholder="13:45:00" id="example-time-input"> </div>
+        </div>
+         <div class="form-group row">
+            <label for="example-time-input" class="col-md-5 col-form-label">Address</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="admin.address" type="String" placeholder="City" id="example-time-input"> </div>
+        </div>
+    
+        <!--
+        <div class="form-group row">
+            <label for="example-color-input" class="col-md-5 col-form-label">Color</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="" type="color" placeholder="#563d7c" id="example-color-input"> </div>
+        </div>
+        
+-->
+        </form>
+    </div>
+</div>
+<br>
+<br>
 
-
-
-
-
-
-
-
-
-
-<!--{{test}}-->
+<div class="row">
+    <div class="col-mx-12">
+            <button ng-click="postRequest(admin)" type="submit" class="btn btn-primary col-md-12">Submit</button>
+        </div>
+        </div>
+<div ng-show="view"> {{viewMessage}} <img ng-src="{{image}}"> </div>

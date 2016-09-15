@@ -3,20 +3,40 @@ var storeRouter = express.Router();
 var Store = require('../models/stores');
 var comments = require('../models/comments');
 
-storeRouter.route("/")
+storeRouter.route("/stores")
     .get(function (req, res) {
+        var query = req.query;
+        console.log("query"+ req.query);
+        if (req.query.restName) {
+            console.log("restName: " + req.query.restName)
 
-        Store.find(function (err, allStories) {
-            if (err) {
-                res.status(500).send(err);
-            } else {
-                res.send(allStories);
-            }
+            Store.find(req.query, function (err, allStories) {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    var restSearch = req.query.restName;
+                    for (store in allStories) {
+                        console.log(allStories[store].restoName + " " + req.query.restName);
+                        var comp = allStories[store].restoName;
+                        if (comp == restSearch)
+                            res.send(allStories[store]);
+                    }
 
-        })
+                }
+            });
+        } else {
+            Store.find(function (err, allStories) {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                    res.send(allStories);
+                }
+
+            })
+        }
     })
     .post(function (req, res) {
-//        console.log(req.body);
+        //        console.log(req.body);
         var newStore = new Store(req.body);
         newStore.save(function (err, newOneStore) {
             if (err) {
@@ -58,12 +78,12 @@ storeRouter.route("/:id")
     Store.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     }, function (err, updatedStore) {
-         console.log(updatedStore);
+        console.log(updatedStore);
         if (err) {
             res.status(500).send(err);
         } else {
             res.send(updatedStore);
-//            console.log(updatedStore);
+            //            console.log(updatedStore);
         }
     });
 

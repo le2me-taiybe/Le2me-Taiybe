@@ -1,14 +1,14 @@
-var app = angular.module("MyApp", ["ngRoute"]);
+var app = angular.module("MyApp", ["ngRoute","myRest.auth"]);
 app.config(["$routeProvider", function ($routeProvider) {
+    console.log("Hey");
     $routeProvider
-
         .when("/", {
             templateUrl: "components/home/home.html",
             controller: "homeController"
         })
-        .when("/admimistrator", {
+        .when("/administrator", {
             templateUrl: "components/administrator/administrator.html",
-            controller: "admimistratorController"
+            controller: "AdminController"
         })
         .when("/supporter", {
             templateUrl: "components/supporter/supporter.html",
@@ -20,4 +20,4 @@ app.config(["$routeProvider", function ($routeProvider) {
         .otherwise({
             redirectTo: "/"
         });
-}])
+}]);

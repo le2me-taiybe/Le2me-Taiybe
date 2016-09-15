@@ -1,0 +1,30 @@
+  <div class="searchDiv">
+
+
+        <div>
+            <ds-widget-clock theme="white" data-show-digital digital-format="'HH:mm'"></ds-widget-clock>
+        </div>
+
+        <div class="searchBar">
+            <form class="navbar-form navbar-left" role="search" style=" position: relative;">
+                <div class="form-group" style="margin-top: 5%;">
+                    <input type="text" class="form-control" placeholder="Search"> </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-3" style="margin-top: 2%; ">
+                <!--    ng-repeat="resto in leb"-->
+                <div class="thumbnail"> <img src="https://images-lebtivity-com.s3.amazonaws.com/content/versions/2243/437-303-0-0/watch_the_euro_cup_2012_at_roadster_diner.jpg">
+                    <div class="caption">
+                        <h3>{{ resto.restoName }}</h3>
+                        <p>{{ resto.storeImg }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Call Now</a> <a href="#" class="btn btn-default" role="button">Get Direction</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

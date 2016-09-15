@@ -15,8 +15,9 @@
                 <nav class="navbar navbar-default navbar-fixed-top">
                     <div class="container">
                         <ul class="nav navbar-nav">
-                            <li><a href="#/admimistrator">administrator</a></li>
+                            <li><a href="#/administrator" ng-show="userService.isAuthenticated()">administrator</a></li>
                             <li><a href="#/home">home</a></li>
+                            <li><a href="#/logout">Logout</a></li>
                             <li><a href="#/contact-Us">contact-Us</a></li>
                             <li><a href="#/supporter">supporter</a></li>
                         </ul>
@@ -27,11 +28,6 @@
         <div ng-view></div>
     </div>
 
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="app.js"></script>
@@ -39,7 +35,10 @@
     <script src="components/home/home.js"></script>
     <script src="components/supporter/supporter.js"></script>
     <script src="components/administrator/administrator.js"></script>
-    <script src="sevices.js"></script>
+    <script src="services.js"></script>
+    <script src="components/auth/login/login.js"></script>
+    <script src="components/auth/signup/signup.js"></script>
+    <script src="components/auth/auth.js"></script>
+    <script src="components/auth/logout/logout.js"></script>
 </body>
-
 </html>

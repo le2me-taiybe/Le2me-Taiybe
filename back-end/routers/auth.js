@@ -36,6 +36,31 @@ authRouter.post("/login", function (req, res) {
         }
     })
 })
+authRouter.get("/login", function (req, res) {
+
+    User.find(function (err, allStories) {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.send(allStories);
+        }
+
+    })
+})
+authRouter.delete("/:id", function (req, res) {
+    var storeId = req.params.id;
+    User.findOneAndRemove({
+        _id: storeId
+    }, function (err, deletedStore) {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.send(deletedStore);
+        }
+
+    })
+
+})
 
 authRouter.post("/signup", function (req, res) {
     User.find({
@@ -47,7 +72,7 @@ authRouter.post("/signup", function (req, res) {
         } else {
             if (existingUser.length) {
                 res.send({
-                    message: "This e-mail is already exist in our database. try signing in",
+                    message: "This email is already exist in our database. try signing in",
                     success: false
                 });
 
